@@ -21,7 +21,7 @@
 
           </header>
           <div>
-            <form>
+            <form method="POST" action="app/cadastro.php">
               <div>
                 <input type="text" name="email" placeholder="Seu e-mail" required="required">
               </div>

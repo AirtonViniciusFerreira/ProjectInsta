@@ -1,3 +1,12 @@
+<?php
+  require_once "app/util.php";
+  $data = fromSession('data');
+  $messages = fromSession('messages');
+  $senha = isset($data['senha'])?$data['senha']:'';
+  $email = isset($data['email'])?$data['email']:'';
+  
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
@@ -21,7 +30,17 @@
               </h1>
               <h3>Faça Login para ver fotos e vídeos dos seus amigos</h3>
             </header>
-            <form>
+            <?php
+              session_start();
+              if(isset($_SESSION['unauthenticated'])):
+            ?>
+            <div>
+                <p>ERRO: Usuario ou senha Invalidos.</p>
+            </div>
+            <?php
+            endif;
+            ?>
+            <form method="POST" action=app/enter.php>
               <div>
                 <input type="text" name="email" placeholder="Seu e-mail" required="required">
               </div>
