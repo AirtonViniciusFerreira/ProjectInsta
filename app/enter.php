@@ -16,7 +16,6 @@ if (strlen($messages) > 0){
   header("Location: ../login.php");
   exit();
 }
-$i-> $data;
 
 $inscricoes = database_find("usuarios", "senha",  $data['senha']);
 
@@ -30,9 +29,10 @@ foreach ($inscricoes as $i) {
 
 if (!isset($inscricao)){
   $messages = "Sua conta não foi encontrada";
-  toSession("messages", $messages);
+  toSession("error", $messages);
   header("Location: ../login.php");
   exit();
 }
-header("Location: ../feed.php"); 
+toSession("subscription",$inscricao);
+header("Location: ../pages/feed.php"); 
  ?>

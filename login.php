@@ -4,7 +4,7 @@
   $messages = fromSession('messages');
   $senha = isset($data['senha'])?$data['senha']:'';
   $email = isset($data['email'])?$data['email']:'';
-  
+  print_r($_SESSION);
  ?>
 
 <!DOCTYPE html>
@@ -31,13 +31,13 @@
               <h3>Faça Login para ver fotos e vídeos dos seus amigos</h3>
             </header>
             <?php
-              session_start();
-              if(isset($_SESSION['unauthenticated'])):
+            if(isset($_SESSION['error'])):
             ?>
             <div>
-                <p>ERRO: Usuario ou senha Invalidos.</p>
+                <p>ERRO: Usuario ou senha Invalidos. </p>
             </div>
             <?php
+            unset($_SESSION['error']);
             endif;
             ?>
             <form method="POST" action=app/enter.php>
@@ -52,7 +52,7 @@
               </div>
             </form>
             <footer class="optional-panel">
-              <h3>Ainda não tem uma conta? <a class="linkButton" href="registro.php">Cadastre-se</a></h3>
+              <h3>Ainda não tem uma conta? <a class="linkButton" href="pages/registro.php">Cadastre-se</a></h3>
             </footer>
           </section>
         </section>

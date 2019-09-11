@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    margin: 80px 0;
+}
+
+.left{
+    width: 260px;
+    margin: 0 10px;
+
+}
+
+.right{
+    width: 900px;
+
+}
+
+.rightfull{
+    width: 1200px;
+    margin: 0 10px;
+    position: static;
+}
+
+.left,.right, .rightfull{ 
+    min-height: 50px;
+    background: #9c9c9c;
+    float: left;
+}
+
+
+.photos{
+    margin: 20px 0;
+    float: left;
+}
+
+.bloco{
+    width: 100%;
+    min-width: 100px;
+    margin-bottom: 10px;
+    background: black;
+}

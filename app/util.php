@@ -31,4 +31,6 @@
         $replace = array("\\\\","\\0","\\n", "\\r", "\'", '\"', "\\Z");
         return str_replace($search, $replace, $value);
      }
+
+    
  ?>

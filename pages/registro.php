@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstaClone - Registro</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
     crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto|Kaushan+Script" rel="stylesheet">
@@ -48,7 +48,7 @@
           </div>
           <footer class="optional-panel">
             <h3>__________________________</h3>
-             <h3>Já tem uma conta? <a class="linkButton" href="login.php">Conecte-se</a></h3>
+             <h3>Já tem uma conta? <a class="linkButton" href="../login.php">Conecte-se</a></h3>
           </footer>
         </section>
       </main>
